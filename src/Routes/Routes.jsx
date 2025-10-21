@@ -6,13 +6,10 @@ import Root from '../Pages/Root/Root';
 export const router = createBrowserRouter([
     {
         path: "/",
-        component: Root,
+        Component: Root,
         children: [
-            {
-                index: true, 
-                path: "/",
-                component: Home
-            }
+            { index: true , Component: Home}
         ]
+       
     }
 ])
