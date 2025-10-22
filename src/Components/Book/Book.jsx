@@ -1,3 +1,4 @@
+import { Star } from "lucide-react";
 import React from "react";
 
 const Book = ({book}) => {
@@ -21,13 +22,17 @@ const Book = ({book}) => {
             }
         </div>
         <h2 className="card-title text-3xl font-bold">{bookName}</h2>
-        <p className="text-lg font-medium">by : {author}</p>
-        <div className="card-actions">
-          
+        <p className="text-lg font-medium mb-2">by : {author}</p>
+        <div className="card-actions text-xl font-medium justify-between border-t-2 border-dashed border-gray-300 pt-5">
+          <h5>{category}</h5>
+          <div className="flex items-center">
+            <p>5.00</p>
+            <Star size={18}></Star>
+          </div>
         </div>
       </div>
     </div>
-  );
+  );z
 };
 
 export default Book;
