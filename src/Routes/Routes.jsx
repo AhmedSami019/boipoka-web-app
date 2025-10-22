@@ -1,15 +1,18 @@
-import React from 'react';
-import { createBrowserRouter } from 'react-router';
-import Home from '../Pages/Home/Home';
-import Root from '../Pages/Root/Root';
+import React from "react";
+import { createBrowserRouter } from "react-router";
+import Home from "../Pages/Home/Home";
+import Root from "../Pages/Root/Root";
 
 export const router = createBrowserRouter([
-    {
-        path: "/",
-        Component: Root,
-        children: [
-            { index: true , Component: Home}
-        ]
-       
-    }
-])
+  {
+    path: "/",
+    Component: Root,
+    children: [
+      {
+        index: true,
+        loader: () => fetch("booksData.json"),
+        Component: Home,
+      },
+    ],
+  },
+]);
